@@ -1,0 +1,11 @@
+/* 
+* multiline comments supported as well 
+*/
+fun greet(name) {
+    "Hello, " + name; // implicit returns
+}
+
+// single line comment
+var name = "Mitch";
+
+print(greet(name));

@@ -1,0 +1,21 @@
+var a = 1;
+
+{
+    fun showA() {
+        print("%d", a);
+    }
+
+    var a = 2;
+    a = 3;
+
+    showA(); // 1
+    print("%d", a); // 3
+}
+
+print("%d", a); // 1
+
+
+/*
+ should be 1,3,1 when the bug is fixed
+ */
+ 

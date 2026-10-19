@@ -1,0 +1,28 @@
+/*
+ * Example of a higher-order function that prevent a function from running more than once. 
+ */
+
+fun hello() {
+    print("hello");
+}
+
+fun once(f) {
+    var called = false;
+
+    fun run_once() {
+     if (not called) {
+        f();
+     }
+    called = true;
+    return;
+    }
+    
+    return run_once;
+}
+
+var x = once(hello);
+
+x();
+x();
+x();
+print("^ only 1 hello?");

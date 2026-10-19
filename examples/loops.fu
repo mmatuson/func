@@ -1,0 +1,20 @@
+fun main() {
+
+  var count = 0; 
+
+  while (count < 1_000) {
+    
+    if (count % 2 == 0) { // correct precedence
+      print("count => %d", count);
+    }
+
+    if count == 100 {
+        sleep(5_000); // native function
+    } else if count == 500 { // optional parens
+        break;
+    }
+    count = count + 1;
+  }
+}
+
+main();

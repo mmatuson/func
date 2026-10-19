@@ -1,0 +1,14 @@
+[package]
+name = "func"
+version = "0.0.1"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.6.7", features = ["derive"] }
+dynfmt = { version = "0.2.0", features = ["python"] }
+rustyline = "19.0.0"
+
+[features]
+default = ["persistent-ds-env"]
+basic-env = []
+persistent-ds-env = []

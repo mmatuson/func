@@ -1,0 +1,15 @@
+fun makeCounter() {
+    var count = 0;
+
+    fun increment() {
+        count = count + 1;
+        return count;
+    }
+
+    increment; // implicit returns
+}
+
+var counter = makeCounter();
+print("%d", counter()); // 1
+print("%d", counter()); // 2
+print("%d", counter()); // 3
